@@ -1,0 +1,88 @@
+.header {
+    height: 50vh;
+    background:  linear-gradient(
+        rgba(201, 192, 192, 0.493),
+        rgba(216, 206, 206, 0.45) 
+      ), url('../../logos/volunteer3.jpg' );;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px 50px;
+    
+}
+.logo {
+    height: 50px;
+    object-fit: contain;
+
+}
+.menu > .page {
+    text-decoration: none;
+    color: #111;
+    padding: 3px 12px;
+    margin-right: 4px;
+
+}
+.page:nth-child(5){
+    background-color: #4285F4;
+    color: white;
+    font-size: 13px;
+    padding:8px 18px;
+    border-radius: 3px;
+    border: 2px solid #4285F4;
+    transition: 100ms ease-in;
+}
+.page:nth-child(5):hover{
+    border: 2px solid #4285F4;
+    background-color: transparent;
+    border: 2px solid #4285F4;
+    color: black;
+
+}
+
+.page:nth-child(6){
+    background-color: #1f1f1f;
+    color: white;
+    font-size: 13px;
+    padding:8px 18px;
+    border-radius: 3px;
+    border: 2px solid #1f1f1f;
+    transition: 100ms ease-in;
+}  
+.page:nth-child(6):hover{
+    background-color:transparent;
+    color: black;
+}
+.header__search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 41px;
+    border: 1px solid lightgray;
+    background-color: rgba(255, 255, 255, 0.651);
+    padding-left: 10px;
+    border-radius: 999px;
+    width: 450px;
+    display: flex;
+    justify-content: space-between
+    
+}
+.header__search > input {
+    border: none;
+    width: 100%;
+    padding-left: 6px;
+    background-color: transparent;
+    
+}
+.header__search > Button {
+    border: 2px solid #1BB76E;
+    border-radius: 999px;
+    padding: 0px 23px;
+    background-color: #1BB76E;
+}

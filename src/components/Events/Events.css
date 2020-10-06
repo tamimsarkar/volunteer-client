@@ -1,0 +1,16 @@
+.event {
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 4px;
+}
+.event > img {
+    height: 100px;
+}
+.status {
+    margin-left: 10px;
+}
+.cencel__button {
+    border: 1px solid gray !important
+}
