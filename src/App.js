@@ -38,14 +38,7 @@ function App() {
           <Route path="/blog">
             <Blog />
           </Route>
-          <PrivateRoute path="/admin-panel/addEvent">
-            <SideBar />
-            <AddEvent />
-          </PrivateRoute>
-          <Route path="/admin-panel/volunteer-list">
-            <SideBar />
-            <VolunteersList />
-          </Route>
+       
           <Route path="/login-page">
             <Login />
           </Route>
