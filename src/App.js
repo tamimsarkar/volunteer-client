@@ -13,6 +13,9 @@ import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute.js/PrivateRoute';
 import Admin from './components/Admin/Admin';
+import AddEvent from './components/Admin/AddEvent';
+import VolunteersList from './components/volunteersList/VolunteersList';
+import SideBar from './components/Admin/SideBar';
 export const UserContext = createContext()
 export const TitleContext = createContext();
 function App() {
@@ -35,13 +38,25 @@ function App() {
           <Route path="/blog">
             <Blog />
           </Route>
+          <PrivateRoute path="/admin-panel/addEvent">
+            <SideBar />
+            <AddEvent />
+          </PrivateRoute>
+          <Route path="/admin-panel/volunteer-list">
+            <SideBar />
+            <VolunteersList />
+          </Route>
           <Route path="/login-page">
             <Login />
           </Route>
-          <Route path="/admin-panel">
+          <PrivateRoute path="/admin-panel">
             <Admin />
-          </Route>
+          </PrivateRoute>
           <PrivateRoute path="/register/:key">
+            <Register />
+          </PrivateRoute>
+          
+          <PrivateRoute path="/register">
             <Register />
           </PrivateRoute>
           <Route exact path="/">

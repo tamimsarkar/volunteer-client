@@ -1,0 +1,26 @@
+.sidebar {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid lightgray;
+    background-color: #dcfaf7;
+    height: 100vh;
+    margin-top: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.permalink {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.permalink > Button {
+    background-color:rgb(184, 240, 240) !important;
+    border-radius: 999px !important;
+    margin-top:10px
+}
+
+.sidebar__logo {
+    height: 50px;
+    object-fit: contain;
+}

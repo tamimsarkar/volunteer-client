@@ -17,13 +17,13 @@ const Header = () => {
                     <Link className="page" to='/donation'>Donation</Link>
                     <Link className="page" to='/events'>Events</Link>
                     <Link className="page" to='/blog'>Blog</Link>
-                    <Link className="page" to='/register-for-admin'>Register</Link>
+                    <Link className="page" to='/register'>Register</Link>
                     <Link className="page" to='/admin-panel'>Admin</Link>
-                    {loggedInUser ? <small>hello {loggedInUser.name}</small> : <small>Hello</small>}
+                    {loggedInUser ? <small>{loggedInUser.name}</small> : <small></small>}
                     
                 </div>
             </nav>
-            <h1 style={{textAlign: 'center',marginTop: '20px',fontSize: '26px'}}>I GROW BY HELPING PEOPLE IN NEED.</h1>
+            <h1 style={{textAlign: 'center',fontSize: '26px'}}>I GROW BY HELPING PEOPLE IN NEED.</h1>
             <div className="header__search">
                
                 <input type="text" placeholder="Search here..."/>

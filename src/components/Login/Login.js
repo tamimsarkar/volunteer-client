@@ -34,7 +34,7 @@ const Login = () => {
     }
     return (
         <div className='login__page'>
-            <img src={logo} alt=""/>
+            <Link to="/"><img className='login__logo' src={logo} alt=""/></Link>
             <div className="login__box">
             <h4>To Continue</h4>
                 <div className="google">

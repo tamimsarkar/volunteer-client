@@ -1,4 +1,19 @@
-.event > img {
+.home__event {
+    display: flex;
+    flex-direction: column;
+}
+.home__event > img {
     height:300px;
     object-fit: contain;
+}
+.service__button {
+    outline-width: 0 !important;
+    border: 1px solid lightgray !important;
+    border-radius: 999px !important;
+    background-color: #f3f3f3 !important;
+    
+}
+.link {
+    text-decoration:  none !important;
+    color: black !important;
 }

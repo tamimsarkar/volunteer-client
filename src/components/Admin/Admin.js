@@ -1,58 +1,19 @@
-import { Button } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
-import trash from '../../logos/trash-2 9.png'
-import logo from '../../logos/Group 1329.png'
+import React from 'react'
 import './Admin.css'
-import { Link } from 'react-router-dom';
+import SideBar from './SideBar';
+import AddEvent from './AddEvent';
+import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import 'react-pro-sidebar/dist/css/styles.css';
+import VolunteersList from '../volunteersList/VolunteersList';
 const Admin = () => {
-    const [user, setUser] = useState([])
-    const [deleted,setDeleted] = useState(false)
-    useEffect(() => {
-        fetch('https://tranquil-badlands-94867.herokuapp.com/registers')
-        .then(res => res.json())
-        .then(data =>setUser(data))
-        
-    }, [deleted])
-
-    const handleDelete = (id) => {
-        
-        fetch(`https://tranquil-badlands-94867.herokuapp.com/delete/${id}`,{
-            method : 'DELETE'
-        })
-        .then(res => res.json())
-        .then(data =>{
-            if(data){
-               setDeleted(true)
-            }
-        })
-    }
+    
     return (
         <div className="admin">
-            <div className="panel">
-                <Link to="/"><img className="logo" src={logo} alt=""/></Link>
-                <Button>Volunteers List</Button>
-                <Button>Add Event</Button>
-            </div>
-            <div className="volunteer__list">
-                <div className="list">
-                    <p>name</p>
-                    <p>Email ID</p>
-                    <p>Registration Date</p>
-                    <p>Volunteer Service</p>
-                    <p>Action</p>
-                </div>
-                {
-                    user.map(info => (
-                        <div className="list">
-                        <p>{info.name}</p>
-                        <p>{info.email}</p>
-                        <p>{info.date}</p>
-                        <p>{info.title}</p>
-                        <Button onClick={()=>handleDelete(info._id)}><img className="trash__button" src={trash} alt=""/></Button>
-                    </div>
-                    ))
-                }
-            </div>
+            <h2>Admin Panel</h2>
+            
+              <VolunteersList />
+              
+              <AddEvent />
         </div>
     );
 };

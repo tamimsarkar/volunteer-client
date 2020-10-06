@@ -18,7 +18,7 @@
     border: 1px solid lightgray;
     border-radius: 4px;
 }
-.login__page > img {
+.login__logo {
     height:60px;
     object-fit: contain;
 }
@@ -29,7 +29,7 @@
     margin-right: 20px;
 }
 .google{
-    height: 40px;
+    height: 36px;
     border: 1px solid lightgray;
     border-radius: 999px;
     overflow: hidden;
@@ -42,6 +42,7 @@
     text-transform: capitalize !important;
     letter-spacing:1px !important;
     word-spacing: 1px !important;
+    outline-width: 0 !important;
     
     
 }

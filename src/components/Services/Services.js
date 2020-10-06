@@ -9,9 +9,9 @@ const Services = (props) => {
     const {img,title,_id} = props.service
     return (
         
-            <div className="col-md-3 col-sm-12 event">
+            <div className="col-md-3 col-sm-12 home__event">
                 <img src={img} alt=""/>
-                <Button onClick = {()=> setEventTitle({title,img})}><Link to={'/register/' + _id}>{title}</Link></Button>
+                <Button className="service__button" onClick = {()=> setEventTitle({title,img,key})}><Link className="link" to={'/register/' + _id}>{title}</Link></Button>
             
             </div>
         

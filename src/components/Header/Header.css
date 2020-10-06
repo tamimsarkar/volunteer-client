@@ -85,4 +85,5 @@ nav{
     border-radius: 999px;
     padding: 0px 23px;
     background-color: #1BB76E;
+    outline-width: 0;
 }

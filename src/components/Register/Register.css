@@ -6,7 +6,7 @@
     background-color: #f8f5f5;
     padding: 20px;
 }
-.register > img {
+.register__logo {
     height: 50px;
 }
 .register__header{
@@ -32,6 +32,7 @@
 .form__submit__button {
     border: 2px solid #4285F4 !important;
     font-weight: 600 !important;
+    outline-width:0 !important
 }
 .form__submit__button:hover{
     background-color: #4285F4 !important;

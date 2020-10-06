@@ -1,11 +1,12 @@
 import { Button } from '@material-ui/core';
 import React, { useContext, useEffect, useState } from 'react';
-import {TitleContext} from '../../App'
+import { Link } from 'react-router-dom';
+
+import logo from '../../logos/Group 1329.png'
 import './Events.css'
 const Events = () => {
-    const [eventTitle, setEventTitle] = useContext(TitleContext)
-    const [activity, setActivity] = useState([])
     const [del,setDel] = useState(false)
+    const [activity, setActivity] = useState([])
     
     useEffect(() => {
         fetch('https://tranquil-badlands-94867.herokuapp.com/registers')
@@ -19,14 +20,13 @@ const Events = () => {
         })
         .then(res => res.json())
         .then(data => {
-            if(data){
-                setDel(true)
-            }
+            setDel(true)
         }
             )
     }
     return (
         <div className="container m-auto">
+            <Link to="/"><img className="event__logo" src={logo} alt=""/></Link>
         <div className="row">
             {
                 activity.map(active =>(
@@ -36,10 +36,8 @@ const Events = () => {
                         <div className="status">
                             <h5>{active.title}</h5>
                             <p>{active.date}</p>
-                            {
-                                console.log(active._id)
-                            }
-                            <Button onClick={()=>handleCencel(active._id)} className="cencel__button">Cencel</Button>
+                            
+                            <Button  onClick={()=>handleCencel(active._id)} className="cencel__button">Cencel</Button>
                         </div> 
                     </div>
                     
