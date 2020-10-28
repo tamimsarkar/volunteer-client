@@ -1,5 +1,5 @@
 ## Volunteer Network
-<a href="volunteer-67c35.web.app">click to view</a>
+<a target="_blank" href="https://volunteer-67c35.web.app">click to view</a>
 First we need to do create the react app <br />
 command - `npx create-react-app` <br />
 
