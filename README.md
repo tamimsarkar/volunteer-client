@@ -1,5 +1,5 @@
 ## Volunteer Network
-
+<a href="volunteer-67c35.web.app"></a>
 First we need to do create the react app <br />
 command - `npx create-react-app` <br />
 
@@ -8,7 +8,7 @@ command - `npm install react-router-dom firebase react-bootstrap`
 
 building the Homepage <br />
 
-In the HomePage there are six sections 
+In the HomePage there are mainly 2 sections 
 `Header-section
 Volunteer Events`
 <br />
